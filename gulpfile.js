@@ -15,20 +15,34 @@ gulp.task('wiredep', function(){
 });
 
 gulp.task('inject', function(){
-  var fileGlob = ['app/*.js', 'app/**/*.js'];
+  var jsFiles = ['app/*.js', 'app/**/*.js'];
+  var cssFiles = ['app/*.css'];
 
-  doInject();
-  watch(fileGlob, function(){
+  doInjectJS();
+  watch(jsFiles, function(){
     console.log('file changed');
-    doInject();
+    doInjectJS();
   });
 
-  function doInject(){
+  doInjectCSS();
+  watch(cssFiles, function(){
+    doInjectCSS();
+  });
+
+  function doInjectJS(){
     gulp.src('index.html')
       .pipe(inject(
-        gulp.src(fileGlob)
+        gulp.src(jsFiles)
           .pipe(plumber())
           .pipe(angularFileSort())
+      ))
+      .pipe(gulp.dest('./'));
+  }
+  function doInjectCSS(){
+    gulp.src('index.html')
+      .pipe(inject(
+        gulp.src(cssFiles)
+          .pipe(plumber())
       ))
       .pipe(gulp.dest('./'));
   }

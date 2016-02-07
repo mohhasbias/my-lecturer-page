@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <title>Moh Hasbi Assidiqi - Lecturer of Multimedia Broadcasting</title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+  <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css" />
   <!-- endbower -->
   <!-- inject:css -->
+  <link rel="stylesheet" href="/app/app.css">
   <!-- endinject -->
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="//cdn.materialdesignicons.com/1.4.57/css/materialdesignicons.min.css" rel="stylesheet">
 </head>
 <body ng-app="app">
   <div ui-view></div>
@@ -20,6 +27,7 @@
   <script src="bower_components/angular-messages/angular-messages.js"></script>
   <script src="bower_components/angular-material/angular-material.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/material-design-lite/material.min.js"></script>
   <!-- endbower -->
 
   <!-- inject:js -->
@@ -29,6 +37,7 @@
   <script src="/app/research/research.js"></script>
   <script src="/app/communityService/communityService.js"></script>
   <script src="/app/about/about.js"></script>
+  <script src="/app/common/api.js"></script>
   <!-- endinject -->
 </body>
 </html>

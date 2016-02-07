@@ -1,2 +1,89 @@
 <div app-topbar></div>
-<h1>Hi</h1>
+<div layout="row" flex-gt-md="80" flex-offset-gt-md="10" layout-padding>
+  <md-content layout="column" layout-padding flex="30" layout-align="start center">
+    <img class="img-circle" src="http://placehold.it/150x150" alt="profile-picture" ng-src="{{vm.profilePicture}}">
+    <p class="md-caption">{{vm.fullName}}</p>
+    <div layout="row">
+      <md-button class="md-icon-button" ng-href="{{vm.facebook}}">
+        <md-icon md-font-icon="mdi-facebook" md-font-set="mdi" style="font-size: 24px"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button" ng-href="{{vm.googlePlus}}">
+        <md-icon md-font-icon="mdi-google-plus" md-font-set="mdi" style="font-size: 24px"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button" ng-href="{{vm.linkedIn}}">
+        <md-icon md-font-icon="mdi-linkedin" md-font-set="mdi" style="font-size: 24px"></md-icon>
+      </md-button>
+      <md-button class="md-icon-button" ng-href="{{vm.github}}">
+        <md-icon md-font-icon="mdi-github-circle" md-font-set="mdi" style="font-size: 24px"></md-icon>
+      </md-button>
+    </div>
+    <div>
+      {{vm.location}}
+    </div>
+  </md-content>
+  <md-content layout-padding flex="70">
+    <article>
+      <header><h5>Summary</h5></header>
+      <p class="md-body-1">
+        {{vm.summary}}
+      </p>
+    </article>
+    <article>
+      <header><h5>Education</h5></header>
+      <table class="mdl-data-table">
+        <thead>
+        <tr>
+          <th class="mdl-data-table__cell--non-numeric">Year</th>
+          <th class="mdl-data-table__cell--non-numeric">Institution</th>
+          <th class="mdl-data-table__cell--non-numeric">Major</th>
+          <th class="mdl-data-table__cell--non-numeric">Minor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="education in vm.education">
+          <td class="mdl-data-table__cell--non-numeric">{{education.year}}</td>
+          <td class="mdl-data-table__cell--non-numeric">{{education.institution}}</td>
+          <td class="mdl-data-table__cell--non-numeric">{{education.major}}</td>
+          <td class="mdl-data-table__cell--non-numeric">{{education.minor}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </article>
+    <article>
+      <header><h5>Experience</h5></header>
+      <table class="mdl-data-table">
+        <thead>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric">Year</th>
+            <th class="mdl-data-table__cell--non-numeric">Event</th>
+            <th class="mdl-data-table__cell--non-numeric">Responsibility</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="experience in vm.experiences">
+            <td class="mdl-data-table__cell--non-numeric">{{experience.year}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{experience.event}}</td>
+            <td class="mdl-data-table__cell--non-numeric">{{experience.responsibility}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <article>
+      <header><h5>Skills</h5></header>
+      <table class="mdl-data-table">
+        <thead>
+          <tr>
+            <th class="mdl-data-table__cell--non-numeric">Software</th>
+            <th class="mdl-data-table__cell--non-numeric">Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="skill in vm.skills">
+            <td class="mdl-data-table__cell--non-numeric">{{skill.software}}</td>
+            <td>{{skill.level}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </md-content>
+</div>
