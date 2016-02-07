@@ -1,0 +1,23 @@
+{
+  "name": "my-lecturer-page",
+  "description": "This is a Single Page Application (SPA) powered by [AngularJS](https://angularjs.org/) and skinned using [Angular Material](https://material.angularjs.org/latest/).",
+  "main": "gulpfile.js",
+  "authors": [
+    "Moh Hasbi Assidiqi <mohhasbias@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mohhasbias/my-lecturer-page",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~1.0.5",
+    "angular-ui-router": "~0.2.17"
+  }
+}

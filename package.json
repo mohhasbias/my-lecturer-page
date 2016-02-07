@@ -1,0 +1,29 @@
+{
+  "name": "my-lecturer-page",
+  "version": "1.0.0",
+  "description": "This is a Single Page Application (SPA) powered by [AngularJS](https://angularjs.org/) and skinned using [Angular Material](https://material.angularjs.org/latest/).",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-connect": "^2.3.1",
+    "gulp-inject": "^3.0.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-watch": "^4.3.5",
+    "wiredep": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohhasbias/my-lecturer-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohhasbias/my-lecturer-page/issues"
+  },
+  "homepage": "https://github.com/mohhasbias/my-lecturer-page#readme"
+}
